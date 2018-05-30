@@ -1,0 +1,32 @@
+﻿@model Audaz.MVC.Compras.Models.Pedido
+
+@{
+    ViewBag.Title = "Finalizar";
+}
+
+<h2>Resumo do pedido</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <hr />        
+        <p>@ViewBag.PedidoItem1</p>
+        <p>@ViewBag.PedidoQuantidade1</p>
+        <p>@ViewBag.PedidoItem2</p>
+        <p>@ViewBag.PedidoQuantidade2</p>
+        <p>@ViewBag.PedidoEmail</p>
+        <br></br>
+
+
+        @Html.ActionLink("Enviar resumo por E-mail", "sendMessage", new { pedido = ViewBag.Pedidos })  |
+        @Html.ActionLink("Voltar", "Create")
+
+   </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

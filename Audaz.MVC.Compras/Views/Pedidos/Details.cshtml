@@ -1,0 +1,58 @@
+﻿@model Audaz.MVC.Compras.Models.Pedido
+
+@{
+    ViewBag.Title = "Detalhes";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>Pedido</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Item1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Item1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantidade1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quantidade1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Item2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Item2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantidade2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quantidade2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Voltar", "Index")
+</p>

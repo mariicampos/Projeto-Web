@@ -1,0 +1,64 @@
+﻿@model Audaz.MVC.Compras.Models.Pedido
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Excluir</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Pedido</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Item1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Item1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantidade1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quantidade1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Item2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Item2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantidade2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quantidade2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Excluir" class="btn btn-default" /> |
+            @Html.ActionLink("Voltar", "Index")
+        </div>
+    }
+</div>
